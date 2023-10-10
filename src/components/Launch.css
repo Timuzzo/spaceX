@@ -1,0 +1,121 @@
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: white;
+    align-items: flex-start;
+    border-radius: 10px;
+    height: 300px;
+    overflow: auto;
+}
+
+.number_status {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#number {
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 30px;
+    border-radius: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.date_time {
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#name {
+    align-self: center;
+    font-size: 1.75rem;
+    color: blueviolet;
+}
+
+.status {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#heading {
+    color: white;
+    padding: 20px;
+    font-size: 2.25rem;
+}
+
+#details {
+    text-align: start;
+    padding: 10px 5px 10px 5px
+}
+
+#rocket_faulure {
+    fill: black;
+    width: 25px;
+    height: 25px;
+    transform: rotate(180deg);
+}
+
+#rocket_success {
+    fill: black;
+    width: 25px;
+    height: 25px;
+}
+
+.no_results {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.no_results_text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#no_results_svg {
+    fill: white;
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}

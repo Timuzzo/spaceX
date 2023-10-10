@@ -1,0 +1,23 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter_select {
+    border-radius: 10px;
+    width: 200px;
+    outline: none;
+    padding: 3px 5px 3px 5px;
+}
+
+.filter_select select {
+    display: none;
+}
+
+.filter_heading {
+    color: white;
+    padding: 10px;
+}

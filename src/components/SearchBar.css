@@ -1,0 +1,16 @@
+.search {
+    padding: 10px 10px 0 10px;
+}
+
+.search_input {
+    border-radius: 10px;
+    width: 200px;
+    outline: none;
+    padding: 3px 5px 3px 5px;
+    border: none;
+}
+
+#search_heading {
+    color: white;
+}
+
