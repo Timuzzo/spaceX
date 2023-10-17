@@ -1,33 +1,39 @@
 import "./Filter.css"
+import { Launch } from "../types/launch"
 
-export default function Filter ({launchData, setSearchData}) {
+interface FilterProps {
+    launchData: Launch[];
+    setSearchData: React.Dispatch<React.SetStateAction<Launch[]>>;
+}
 
-const handleSubmit = (e) => {
+export default function Filter({launchData, setSearchData}:FilterProps):React.JSX.Element  {
+
+const handleSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault()
 }
 
-const handleChangeTime = (e) => {
+const handleChangeTime = (e: React.ChangeEvent<HTMLSelectElement>) => {
     if (!e.target.value) 
     return setSearchData(launchData) 
     else if (e.target.value === "past") {
-    const resultsArray = launchData.filter(launch => launch.date_utc < Date())
+    const resultsArray = launchData.filter((launch: Launch) => launch.date_utc < Date())
     setSearchData(resultsArray)
     } 
     else if (e.target.value === "future") {
-    const resultsArray = launchData.filter(launch => launch.date_utc > Date())
+    const resultsArray = launchData.filter((launch: Launch) => launch.date_utc > Date())
     setSearchData(resultsArray)
     }
 }
 
-const handleChangeStatus = (e) => {
+const handleChangeStatus = (e: React.ChangeEvent<HTMLSelectElement>) => {
     if (!e.target.value) 
     return setSearchData(launchData) 
     else if (e.target.value === "success") {
-    const resultsArray = launchData.filter(launch => launch.success === null || launch.success === true)
+    const resultsArray = launchData.filter((launch: Launch) => launch.success === null || launch.success === true)
     setSearchData(resultsArray)
     } 
     else if (e.target.value === "failure") {
-    const resultsArray = launchData.filter(launch => launch.success === false)
+    const resultsArray = launchData.filter((launch: Launch) => launch.success === false)
     setSearchData(resultsArray)
     }
 }
